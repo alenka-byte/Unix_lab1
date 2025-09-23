@@ -20,7 +20,7 @@ cd "$tmp" || exit 1
 
 echo "Compiling $file -> $output"
 if g++ "$(basename "$file")" -o "$output"; then
-   cp "$output " "$(dirname "$file")/"
+   cp "$output" "$(dirname "$file")/"
    echo "Success: Output copied to $(dirname "$file")/$output"
 else
    echo "Complilation failed"
