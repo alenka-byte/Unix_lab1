@@ -14,6 +14,7 @@ else
 fi
 
 tmp=$(mktemp -d) || exit 1
+trap 'rm -rf "$tmp"' EXIT INT TERM HUP
 
 cp "$file" "$tmp/"
 cd "$tmp" || exit 1
