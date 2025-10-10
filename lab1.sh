@@ -24,7 +24,7 @@ if g++ "$(basename "$file")" -o "$output"; then
    cp "$output" "$(dirname "$file")/"
    echo "Success: Output copied to $(dirname "$file")/$output"
 else
-   echo "Complilation failed"
+   echo "Compilation failed"
    exit 1
 fi
 rm -rf "$tmp"
